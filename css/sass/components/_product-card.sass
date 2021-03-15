@@ -1,0 +1,38 @@
+.product-card
+  & > div + div
+    margin-top: 44px
+
+  &__code
+    color: $text-alternate-color
+    font-size: .875rem
+
+  &__payment
+    position: relative
+    z-index: 2
+
+  &__price
+    align-items: flex-start
+    color: $text-accent-color
+    display: flex
+    font-size: 2.5rem
+    position: relative
+
+    @media (max-width: 767px)
+      padding: 5px 0
+
+    &-value
+      flex-srhink: 0
+      margin-right: 20px
+
+    &-currency
+      font-size: 1.125rem
+      text-transform: uppercase
+
+  &__actions
+    @media (max-width: 767px)
+      padding: 5px 0
+
+  // Components in Block
+  .slider
+    position: relative
+    z-index: 1

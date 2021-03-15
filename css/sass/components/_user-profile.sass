@@ -1,0 +1,82 @@
+.user-profile
+  position: relative
+
+  h2
+    align-items: center
+    display: flex
+    font-size: 0
+    margin: 0
+
+    // Иконка пользователя
+    &::before
+      border-radius: 50%
+      content: ""
+      display: block
+      flex-shrink: 0
+      height: 24px
+      margin-right: 7px
+      width: 24px
+      +background-image-contain("../imgs/user-profile.png")
+
+    // Стрелка вниз
+    &::after
+      content: ""
+      display: block
+      height: 6px
+      width: 10px
+      +background-image-contain("../imgs/chevron-down.png")
+
+  &__actions
+    font-size: .8rem
+    left: -40px
+    opacity: 0
+    padding-top: 10px
+    position: absolute
+    top: 24px
+    transition: .4s
+    width: 120px
+    z-index: -1
+    z-index: 9
+
+    &::before
+      border-bottom: 10px solid $layout-secondary-color
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      content: ""
+      height: 0
+      left: 0
+      margin: auto
+      position: absolute
+      right: 0
+      top: 0
+      width: 0
+
+    &-list
+      background-color: $layout-secondary-color
+      border-radius: 8px
+      box-shadow: 0 0 10px rgba(0,0,0,.2)
+      list-style: none
+      margin: 0
+      padding: 0
+      padding: 7px
+
+      & li + li
+        margin-top: 5px
+
+      a
+        color: $link-static-color
+        display: block
+        text-decoration: none
+        transition: .4s
+
+        &:hover,
+        &:active
+          color: $link-hovered-color
+
+.user-profile:hover
+  h2
+    cursor: pointer
+
+  .user-profile__actions
+    opacity: 1
+    z-index: 9

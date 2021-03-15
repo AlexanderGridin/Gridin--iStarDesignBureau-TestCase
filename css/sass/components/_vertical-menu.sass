@@ -1,0 +1,39 @@
+.vertical-menu
+
+  &, ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+  & &__sub-menu,
+  li + li
+    margin-top: 25px
+
+  &__sub-menu
+    font-size: .875rem
+
+  & > li
+    font-size: 1.125rem
+
+  a
+    color: $link-static-color
+    text-decoration: none
+    transition: .4s
+
+    &:hover,
+    &:active
+      color: $link-hovered-color
+
+  .parent
+    & > a
+      align-items: center
+      display: inline-flex
+
+      &::after
+        content: ""
+        display: block
+        flex-shrink: 0
+        height: 5px
+        margin-left: 15px
+        width: 9px
+        +background-image-contain("../imgs/chevron-up.png")

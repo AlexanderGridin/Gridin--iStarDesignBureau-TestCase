@@ -1,0 +1,58 @@
+.tabs
+  &__nav
+    ul
+      align-items: center
+      display: flex
+      list-style: none
+      margin: 0
+      padding: 0
+
+      @media (max-width: 767px)
+        background-color: $layout-secondary-color-lighter
+        flex-wrap: wrap
+        justify-content: center
+        padding: 5px 0
+
+      li
+        max-width: 210px
+        width: 100%
+
+        @media (max-width: 767px)
+          margin: 5px
+          max-width: 100%
+          width: auto
+
+    button
+      background: none
+      border: none
+      border-bottom: 1px solid $layout-secondary-color-darker
+      padding: 20px 10px
+      transition: .4s
+      width: 100%
+
+      @media (max-width: 767px)
+        border: 1px solid $layout-secondary-color-darker
+        padding: 7px 15px
+
+      &:hover,
+      &.active
+        border-bottom: 1px solid $layout-accend-color
+        color: $text-accent-color
+
+        @media (max-width: 767px)
+          border: 1px solid $layout-accend-color
+
+  &__content
+    line-height: 1.5
+
+    & > ul
+      list-style: none
+      margin: 0
+      padding: 0
+
+      li
+        display: none
+        padding: 40px 0
+
+        &.visible
+          display: block

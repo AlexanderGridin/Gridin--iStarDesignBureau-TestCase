@@ -1,0 +1,20 @@
+.header-content
+  padding: 17px 0
+
+  a
+    color: $link-static-color
+    display: inline-block
+    text-decoration: underline
+
+    &:active,
+    &:hover
+      text-decoration: none
+      color: $link-hovered-color
+
+  &__column
+    @media (max-width: 767px)
+      text-align: center
+      padding: 10px 0
+
+    & > div + div
+      margin-top: 15px

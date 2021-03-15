@@ -1,0 +1,36 @@
+.breadcrumbs
+  align-items: start
+  display: flex
+  flex-wrap: wrap
+  font-size: 0.9rem
+  list-style: none
+  margin: 0
+  padding: 0
+
+  & li
+    align-items: center
+    display: flex
+    position: relative
+
+    & + li
+      padding-left: 12px
+
+      // Иконка стрелки хлебной крошки. Устанавливается перед каждой последующей крошкой
+      &::before
+        content: ""
+        display: block
+        height: 5px
+        margin-right: 12px
+        position: relative
+        top: 2px
+        width: 15px
+        +background-image-contain('../imgs/arrow-right.png')
+
+  a
+    color: $link-alternate-color
+    text-decoration: none
+    transition: .4s
+
+    &:hover,
+    &:active
+      color: $link-hovered-color
